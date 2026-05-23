@@ -1,0 +1,1253 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Fredoka',sans-serif;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+}
+
+body{
+    background:#e5e5e5;
+    color:#215486;
+}
+
+/* HEADER */
+.topbar{
+    width:100%;
+    height:68px;
+    background:#365f89;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.menu-btn{
+    position:absolute;
+    left:24px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.brand-title{
+    color:white;
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.shop{
+    position:absolute;
+    right:24px;
+    color:white;
+    font-size:30px;
+}
+
+/* SEARCH */
+.search-box{
+    width:82%;
+    height:43px;
+    background:white;
+    border:3px solid #215486;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:0 16px;
+    margin:22px auto 22px;
+}
+
+.search-box i{
+    font-size:19px;
+    color:#215486;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    flex:1;
+    background:transparent;
+    color:#215486;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* SIDEBAR */
+.sidebar{
+    position:absolute;
+    top:0;
+    left:-300px;
+    width:300px;
+    min-height:100vh;
+    background:#ffca25;
+    z-index:99999;
+    transition:.35s;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar-close{
+    height:82px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding-left:30px;
+    color:#365f89;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.sidebar-brand{
+    height:86px;
+    background:#365f89;
+    color:#fff2b6;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding-left:48px;
+    font-size:22px;
+    font-weight:700;
+}
+
+.sidebar-brand i{
+    font-size:32px;
+}
+
+.sidebar-menu,
+.admin-menu{
+    padding:55px 0 0 28px;
+}
+
+.sidebar-menu a,
+.admin-menu a{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    margin-bottom:37px;
+    text-decoration:none;
+    color:#365f89;
+    font-size:16px;
+    font-weight:700;
+}
+
+.sidebar-menu i,
+.admin-menu i{
+    width:45px;
+    height:45px;
+    font-size:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.sidebar-line{
+    width:100%;
+    height:2px;
+    background:#365f89;
+    margin-top:30px;
+}
+
+.wa-button{
+    position:absolute;
+    bottom:70px;
+    left:35px;
+    right:35px;
+    height:55px;
+    background:#365f89;
+    color:white;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:700;
+}
+
+/* BERANDA */
+.beranda-page{
+    padding:18px 0 70px;
+}
+
+.beranda-kategori{
+    width:100%;
+    display:flex;
+    gap:13px;
+    overflow-x:auto;
+    padding:0 26px 8px;
+    margin-bottom:34px;
+}
+
+.beranda-kategori a{
+    min-width:76px;
+    background:white;
+    color:#215486;
+    text-decoration:none;
+    text-align:center;
+    padding:8px 14px;
+    border-radius:24px;
+    font-size:13px;
+    font-weight:600;
+    flex-shrink:0;
+}
+
+.beranda-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:34px 24px;
+    padding:24px 34px 70px;
+    align-items:start;
+}
+
+.beranda-card{
+    width:100%;
+    height:360px;
+    border:6px solid #ffc928;
+    border-radius:42px;
+    background:#fdecae;
+    position:relative;
+    overflow:hidden;
+}
+
+.beranda-img{
+    width:100%;
+    height:158px;
+    background:white;
+    border-radius:0 0 36px 36px;
+    overflow:hidden;
+}
+
+.beranda-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.beranda-brand{
+    position:absolute;
+    top:18px;
+    right:16px;
+    background:#ffc928;
+    color:#215486;
+    padding:7px 18px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    z-index:5;
+    box-shadow:0 5px 10px rgba(0,0,0,.25);
+}
+
+.beranda-text{
+    padding:18px 16px 0;
+}
+
+.beranda-text h2{
+    font-size:23px;
+    line-height:23px;
+    font-weight:700;
+    color:#215486;
+    margin-bottom:6px;
+}
+
+.beranda-text .deskripsi{
+    font-size:13px;
+    color:#215486;
+    margin-bottom:28px;
+}
+
+.harga-area h3{
+    font-size:20px;
+    line-height:21px;
+    color:#215486;
+    font-weight:700;
+    margin-bottom:3px;
+}
+
+.harga-area p{
+    font-size:12px;
+    line-height:14px;
+    color:#215486;
+    font-weight:500;
+}
+
+/* keranjang di beranda disembunyikan */
+.beranda-card .cart-btn{
+    display:none !important;
+}
+
+/* KATALOG PRODUK */
+.katalog-content{
+    padding:20px 18px 70px;
+}
+
+.katalog-content h1{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.katalog-content h1 span{
+    color:#79b8ff;
+}
+
+.katalog-content > p{
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.katalog-content .search-box{
+    width:82%;
+    margin:10px auto 28px;
+}
+
+.katalog-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px 18px;
+    padding:0 0 70px;
+}
+
+.katalog-card{
+    height:240px;
+    border:5px solid #ffc928;
+    border-radius:30px;
+    background:#fdecae;
+    position:relative;
+    overflow:hidden;
+    padding:0 10px 40px;
+}
+
+.foto-box{
+    height:115px;
+    background:#f1f1f1;
+    border-radius:0 0 28px 28px;
+    margin:0 -10px;
+    overflow:hidden;
+}
+
+.foto-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.no-img{
+    width:100%;
+    height:100%;
+    background:#f1f1f1;
+    color:#215486;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:12px;
+}
+
+.brand-label{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#ffc928;
+    color:#215486;
+    font-size:10px;
+    font-weight:700;
+    padding:4px 12px;
+    border-radius:15px;
+    box-shadow:0 4px 8px rgba(0,0,0,.25);
+    z-index:2;
+}
+
+.produk-info{
+    padding-top:8px;
+}
+
+.produk-info h2{
+    font-size:15px;
+    font-weight:700;
+    color:#215486;
+    line-height:1.08;
+    margin-bottom:3px;
+    overflow-wrap:anywhere;
+}
+
+.produk-info p{
+    color:#215486;
+    font-size:11px;
+    font-weight:600;
+    line-height:1.2;
+}
+
+/* keranjang katalog */
+.cart-btn{
+    position:absolute;
+    left:10px;
+    right:10px;
+    bottom:9px;
+    height:25px;
+    background:white;
+    color:#215486;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    z-index:10;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+}
+
+.cart-btn i{
+    color:#215486;
+    font-size:13px;
+}
+
+/* tombol edit admin katalog */
+.admin-edit-btn{
+    position:absolute;
+    left:50%;
+    bottom:9px;
+    transform:translateX(-50%);
+    width:74px;
+    height:25px;
+    background:white;
+    color:#2f80ed;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    z-index:10;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+}
+
+.admin-edit-btn i{
+    color:#2f80ed;
+    font-size:13px;
+}
+
+/* DAFTAR PRODUK ADMIN */
+.admin-page{
+    padding:24px 22px 40px;
+}
+
+.admin-title-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+}
+
+.admin-title-row h1{
+    font-size:23px;
+    font-weight:700;
+}
+
+.admin-add-btn{
+    width:128px;
+    height:42px;
+    background:#365f89;
+    color:white;
+    border-radius:28px;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-size:20px;
+    font-weight:700;
+}
+
+.table-card{
+    background:white;
+    border-radius:28px;
+    padding:20px 12px 22px;
+    overflow:hidden;
+}
+
+.produk-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+.produk-table th{
+    font-size:12px;
+    font-weight:700;
+    text-align:center;
+    padding:8px 3px 12px;
+    border-bottom:2px solid #9c9c9c;
+}
+
+.produk-table td{
+    font-size:12px;
+    font-weight:600;
+    padding:9px 3px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.produk-table th:nth-child(1),
+.produk-table td:nth-child(1){width:10%}
+
+.produk-table th:nth-child(2),
+.produk-table td:nth-child(2){
+    width:38%;
+    text-align:left;
+}
+
+.produk-table th:nth-child(3),
+.produk-table td:nth-child(3){width:20%}
+
+.produk-table th:nth-child(4),
+.produk-table td:nth-child(4){width:12%}
+
+.produk-table th:nth-child(5),
+.produk-table td:nth-child(5){width:20%}
+
+.aksi-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+}
+
+.edit-btn,
+.delete-btn{
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.edit-btn i{
+    color:#2f80ed;
+    font-size:17px;
+}
+
+.delete-btn i{
+    color:#d64545;
+    font-size:17px;
+}
+
+/* FORM TAMBAH EDIT */
+.form-produk-page,
+.tambah-page{
+    padding:28px 24px 50px;
+    background:#fdecae;
+}
+
+.form-produk-page h1,
+.tambah-page h1{
+    font-size:26px;
+    font-weight:700;
+    color:#215486;
+    margin-bottom:24px;
+}
+
+.form-produk label,
+.tambah-page label{
+    display:block;
+    font-size:16px;
+    font-weight:700;
+    color:#215486;
+    margin:18px 0 8px;
+}
+
+.form-produk input,
+.form-produk select,
+.tambah-page input,
+.tambah-page select{
+    width:100%;
+    height:46px;
+    border:2px solid #365f89;
+    border-radius:8px;
+    background:white;
+    padding:0 14px;
+    font-size:15px;
+    color:#215486;
+    outline:none;
+    margin-bottom:18px;
+}
+
+.form-produk input[type="file"],
+.tambah-page input[type="file"]{
+    padding:10px;
+}
+
+.btn-simpan{
+    width:150px;
+    height:52px;
+    border:none;
+    border-radius:28px;
+    background:#365f89;
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* KATEGORI PAGE */
+.kategori-page{
+    padding:22px 0 50px;
+    overflow:hidden;
+}
+
+.kategori-page h1{
+    font-size:22px;
+    font-weight:700;
+    margin-left:24px;
+}
+
+.kategori-page > p{
+    font-size:15px;
+    margin-left:24px;
+    margin-bottom:12px;
+}
+
+.kategori-row{
+    width:100%;
+    min-height:155px;
+    display:flex;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.kategori-row h2{
+    color:#215486;
+    font-size:20px;
+    font-weight:700;
+    white-space:nowrap;
+    flex-shrink:0;
+}
+
+.row-yellow h2{
+    width:125px;
+    padding-left:26px;
+}
+
+.row-blue h2{
+    width:125px;
+    padding-left:22px;
+}
+
+.kategori-box{
+    height:118px;
+    width:310px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    flex-shrink:0;
+    overflow:hidden;
+}
+
+.yellow-box{
+    background:#ffd62f;
+    border-radius:28px 0 0 28px;
+}
+
+.blue-box{
+    background:#365f89;
+    border-radius:0 28px 28px 0;
+    margin-left:-18px;
+}
+
+.kategori-scroll{
+    width:100%;
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.mini-img{
+    min-width:82px;
+    width:82px;
+    height:82px;
+    background:#eee;
+    overflow:hidden;
+}
+
+.mini-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* LOGIN */
+.login-page{
+    padding:70px 28px;
+}
+
+.login-card{
+    background:white;
+    border:5px solid #ffc928;
+    border-radius:34px;
+    padding:30px 24px;
+}
+
+.login-card h1{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.login-card p{
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.login-card label{
+    display:block;
+    font-size:17px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.login-card input{
+    width:100%;
+    height:48px;
+    border:3px solid #215486;
+    border-radius:22px;
+    padding:0 16px;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.login-btn{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:24px;
+    background:#365f89;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+}
+
+.login-error{
+    background:#ffe1e1;
+    color:#b00000;
+    border-radius:16px;
+    padding:10px 14px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+/* ===== FIX FINAL BERANDA: CARD TIDAK KEPANJANGAN ===== */
+
+.beranda-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2, 1fr) !important;
+    gap:28px 18px !important;
+    padding:18px 34px 70px !important;
+}
+
+.beranda-card{
+    height:270px !important;
+    min-height:270px !important;
+    max-height:270px !important;
+    border:5px solid #ffc928 !important;
+    border-radius:34px !important;
+    padding:0 12px 12px !important;
+    overflow:hidden !important;
+}
+
+.beranda-img{
+    height:125px !important;
+    margin:0 -12px !important;
+    border-radius:0 0 30px 30px !important;
+}
+
+.beranda-img img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+}
+
+.beranda-text{
+    padding:12px 0 0 !important;
+}
+
+.beranda-text h2{
+    font-size:16px !important;
+    line-height:17px !important;
+    margin-bottom:3px !important;
+}
+
+.beranda-text .deskripsi{
+    font-size:10px !important;
+    margin-bottom:20px !important;
+}
+
+.harga-area h3{
+    font-size:13px !important;
+    line-height:14px !important;
+}
+
+.harga-area p{
+    font-size:9.5px !important;
+    line-height:10.5px !important;
+}
+
+.beranda-brand{
+    top:13px !important;
+    right:12px !important;
+    font-size:10px !important;
+    padding:5px 13px !important;
+}
+
+.beranda-card .cart-btn,
+.beranda-card .admin-edit-btn{
+    display:none !important;
+}
+/* ===== FIX GAMBAR BERANDA BIAR SEPERTI CONTOH ===== */
+
+.beranda-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2, 1fr) !important;
+    gap:28px 22px !important;
+    padding:34px 28px 80px !important;
+}
+
+.beranda-card{
+    height:335px !important;
+    min-height:335px !important;
+    border:5px solid #ffc928 !important;
+    border-radius:38px !important;
+    overflow:hidden !important;
+    padding:0 14px 14px !important;
+    background:#fdecae !important;
+}
+
+.beranda-img{
+    width:auto !important;
+    height:175px !important;
+    margin:0 -14px !important;
+    background:#fff !important;
+    border-radius:0 0 34px 34px !important;
+    overflow:hidden !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+}
+
+.beranda-img img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+.beranda-img .no-img{
+    width:100% !important;
+    height:100% !important;
+    background:#fff !important;
+    border-radius:0 0 34px 34px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    font-size:12px !important;
+    color:#215486 !important;
+}
+
+.beranda-brand{
+    top:16px !important;
+    right:14px !important;
+    z-index:10 !important;
+}
+
+.beranda-text{
+    padding:14px 0 0 !important;
+}
+
+.beranda-text h2{
+    font-size:18px !important;
+    line-height:19px !important;
+}
+
+.beranda-text .deskripsi{
+    font-size:11px !important;
+    margin-bottom:28px !important;
+}
+
+.harga-area h3{
+    font-size:15px !important;
+    line-height:16px !important;
+}
+
+.harga-area p{
+    font-size:10px !important;
+    line-height:11px !important;
+}
+/* ===== FIX FINAL KATEGORI BERANDA ===== */
+
+.beranda-kategori{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    overflow-x:auto;
+    padding:0 22px;
+    margin-top:6px;
+    margin-bottom:18px;
+    scrollbar-width:none;
+}
+
+.beranda-kategori::-webkit-scrollbar{
+    display:none;
+}
+
+.beranda-kategori a{
+    min-width:92px;
+    height:36px;
+    background:#fff;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#215486;
+    font-size:14px;
+    font-weight:600;
+    flex-shrink:0;
+    white-space:nowrap;
+}
+
+.beranda-grid{
+    padding-top:8px;
+}
+.search-box{
+    margin:18px auto 14px !important;
+}
+
+.beranda-grid{
+    padding-top:10px !important;
+}
+/* ===== FIX CART BIAR UKURAN STABIL DI SEMUA DEVICE DEVTOOLS ===== */
+
+html, body{
+    width:100% !important;
+    min-height:100% !important;
+    background:#e5e5e5 !important;
+    overflow-x:hidden !important;
+}
+
+/* paksa frame tetap ukuran HP normal */
+/* khusus halaman cart */
+.cart-page{
+    width:100% !important;
+    min-height:calc(100vh - 68px) !important;
+    background:#fdecae !important;
+    padding:22px 18px 120px !important;
+}
+
+.cart-page h1{
+    font-size:24px !important;
+    font-weight:700 !important;
+    color:#215486 !important;
+    margin:0 0 18px !important;
+}
+
+/* kartu produk */
+.cart-item{
+    width:100% !important;
+    min-height:130px !important;
+    background:#fffdf3 !important;
+    border-radius:16px !important;
+    padding:12px !important;
+    display:flex !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+    box-shadow:0 5px 12px rgba(0,0,0,.18) !important;
+    margin-bottom:16px !important;
+}
+
+.cart-img{
+    width:105px !important;
+    height:105px !important;
+    border-radius:12px !important;
+    overflow:hidden !important;
+    background:#eee !important;
+    flex:0 0 105px !important;
+}
+
+.cart-img img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+.cart-info{
+    flex:1 !important;
+    min-width:0 !important;
+    padding-top:2px !important;
+}
+
+.cart-info h2{
+    font-size:18px !important;
+    line-height:20px !important;
+    font-weight:700 !important;
+    color:#215486 !important;
+    margin:0 0 8px !important;
+}
+
+.cart-info p{
+    font-size:13px !important;
+    line-height:16px !important;
+    font-weight:700 !important;
+    color:#215486 !important;
+    margin:0 0 4px !important;
+}
+
+/* tombol - jumlah + */
+.qty-box{
+    display:flex !important;
+    align-items:center !important;
+    gap:9px !important;
+    margin-top:8px !important;
+}
+
+.qty-btn,
+.qty-number{
+    width:28px !important;
+    height:28px !important;
+    border-radius:8px !important;
+    background:#e9edf5 !important;
+    color:#215486 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-decoration:none !important;
+    border:none !important;
+    font-size:16px !important;
+    font-weight:700 !important;
+}
+
+.qty-number{
+    background:#dfe6f1 !important;
+}
+
+/* total merah */
+.cart-subtotal{
+    color:#b33b52 !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    margin-top:10px !important;
+}
+
+/* bagian bawah */
+.cart-bottom{
+    position:fixed !important;
+    left:50% !important;
+    bottom:0 !important;
+    transform:translateX(-50%) !important;
+    width:430px !important;
+    max-width:430px !important;
+    height:78px !important;
+    background:#fdecae !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:0 34px !important;
+    z-index:9999 !important;
+}
+
+.cart-total{
+    color:#b33b52 !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    margin:0 !important;
+}
+
+.checkout-btn{
+    width:115px !important;
+    height:44px !important;
+    border-radius:10px !important;
+    background:#c85b67 !important;
+    color:white !important;
+    border:none !important;
+    text-decoration:none !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+}
+
+/* jangan berubah walau devtools pilih hp apa pun */
+@media(max-width:600px){
+    .phone,
+    .cart-bottom{
+        width:430px !important;
+        max-width:430px !important;
+        min-width:430px !important;
+    }
+}
+/* ===== FIX RESPONSIVE FINAL BIAR PAS SEMUA DEVICE ===== */
+
+html, body{
+    width:100% !important;
+    min-height:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow-x:hidden !important;
+    background:#e5e5e5 !important;
+}
+
+.phone{
+    width:100% !important;
+    max-width:430px !important;
+    min-width:0 !important;
+    min-height:100vh !important;
+    margin:0 auto !important;
+    background:#fdecae !important;
+    overflow-x:hidden !important;
+    position:relative !important;
+}
+
+/* jangan paksa 430px di HP */
+@media(max-width:430px){
+    .phone{
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+    }
+}
+
+/* BERANDA BIAR TETAP 2 KOLOM RAPI */
+.beranda-page{
+    padding:18px 14px 70px !important;
+}
+
+.beranda-grid{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:30px 22px !important;
+    padding:10px 20px 70px !important;
+    align-items:start !important;
+}
+
+.beranda-card{
+    width:100% !important;
+    height:280px !important;
+    min-height:280px !important;
+    border:5px solid #ffc928 !important;
+    border-radius:38px !important;
+    background:#fdecae !important;
+    overflow:hidden !important;
+    position:relative !important;
+    padding:0 14px 14px !important;
+}
+
+.beranda-img{
+    width:auto !important;
+    height:135px !important;
+    margin:0 -14px !important;
+    background:#fff !important;
+    border-radius:0 0 34px 34px !important;
+    overflow:hidden !important;
+}
+
+.beranda-img img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+.beranda-text{
+    padding:12px 0 0 !important;
+}
+
+.beranda-text h2{
+    font-size:16px !important;
+    line-height:17px !important;
+    margin:0 0 4px !important;
+}
+
+.beranda-text .deskripsi{
+    font-size:10px !important;
+    margin:0 0 22px !important;
+}
+
+.harga-area h3{
+    font-size:13px !important;
+    line-height:14px !important;
+}
+
+.harga-area p{
+    font-size:10px !important;
+    line-height:11px !important;
+}
+
+/* SEARCH + KATEGORI */
+.beranda-page .search-box{
+    width:82% !important;
+    height:36px !important;
+    margin:0 auto 14px !important;
+}
+
+.beranda-kategori{
+    width:100% !important;
+    display:flex !important;
+    gap:10px !important;
+    overflow-x:auto !important;
+    padding:0 12px 10px !important;
+    margin:0 0 22px !important;
+    scrollbar-width:thin !important;
+}
+
+.beranda-kategori a{
+    min-width:82px !important;
+    height:24px !important;
+    padding:5px 12px !important;
+    border-radius:18px !important;
+    background:#fff !important;
+    color:#215486 !important;
+    font-size:10px !important;
+    font-weight:600 !important;
+    text-align:center !important;
+    text-decoration:none !important;
+    flex-shrink:0 !important;
+}
+
+.beranda-card .cart-btn,
+.beranda-card .admin-edit-btn{
+    display:none !important;
+}
+/* UBAH WARNA TOTAL HARGA DI KERANJANG */
+.cart-total,
+.cart-total h3,
+.cart-total-price,
+.cart-item-total,
+.total-harga,
+.total-price{
+    color:#c9a12b !important;
+}
+/* FIX WARNA HARGA KERANJANG */
+.cart-item p,
+.cart-item h3,
+.cart-card p,
+.cart-card h3{
+    color:#d4aa2f !important;
+}

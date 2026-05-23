@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
+if (!function_exists('sm_cols')) {
+
 function sm_cols($table = 'produk') {
     try {
         return Schema::hasTable($table) ? Schema::getColumnListing($table) : [];
@@ -176,6 +178,8 @@ function sm_data_produk(Request $r, $kode = null) {
     }
 
     return $data;
+}
+
 }
 
 /* PENGUNJUNG */
